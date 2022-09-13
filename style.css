@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #ffffff;
+  --bg-cards-color: #e1e1e6;
+  --bg-changed-cards: #02799d;
+  --primary-color: #323238;
+  --changed-cards: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  gap: 19.2rem;
+}
+
+/* Painel com o temporizador */
+
+#panel {
+  display: flex;
+  flex-direction: column;
+}
+
+#panel button {
+  border: none;
+  border-radius: 2.4rem;
+}
+
+#timer {
+  display: flex;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  margin-bottom: 1.7rem;
+  color: var(--primary-color);
+}
+
+/* Botões de controle */
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-color);
+}
+
+#controls button {
+  cursor: pointer;
+}
+
+/* Cards */
+
+#cards {
+  display: grid;
+  grid-template-areas:
+    'A B'
+    'C D';
+  gap: 3.2rem;
+}
+
+#cards button {
+  border: none;
+  border-radius: 2.4rem;
+  cursor: pointer;
+}
+
+/* Troca de cor dos cards utilizando "Fill e Path". */
+
+#cards button:hover svg path:nth-child(1) {
+  fill: var(--bg-changed-cards);
+}
+
+#cards button:hover svg path:nth-child(2) {
+  fill: white;
+}
